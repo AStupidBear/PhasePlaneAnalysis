@@ -1,5 +1,6 @@
 module PhasePlaneAnalysis
-
-# package code goes here
-
+	using MATLAB
+	cd(joinpath(Pkg.dir("PhasePlaneAnalysis"),"src"))
+	spawn(`jupyter-notebook PhasePlaneAnalysis.ipynb`)
+	mat"addpath($(pwd()))"
 end # module
